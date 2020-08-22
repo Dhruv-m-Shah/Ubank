@@ -15,6 +15,7 @@ recognition.interimResults = false;
 recognition.onresult = function (event) {
   var current = event.results.length - 1;
   var command = event.results[current][0].transcript;
+  //'command' contains the string inputted by the user
   message.textContent = "Voice Input: " + command;
   console.log(command);
 };
