@@ -5,16 +5,7 @@ const MessagingResponse = require('twilio').twiml.MessagingResponse;
 var firebase = require('firebase');
 const { stringify } = require('querystring');
 
-const firebaseConfig = {
-    apiKey: "AIzaSyCvhl7W3jMuxVDHOelESIDZ4aq8kZEUwrw",
-    authDomain: "hackthesix-70c79.firebaseapp.com",
-    databaseURL: "https://hackthesix-70c79.firebaseio.com",
-    projectId: "hackthesix-70c79",
-    storageBucket: "hackthesix-70c79.appspot.com",
-    messagingSenderId: "852044057982",
-    appId: "1:852044057982:web:b1c535a414699297df772f",
-    measurementId: "G-VM4Y596EFN"
-  };
+
 
 firebase.initializeApp(firebaseConfig);
 var firestore = firebase.firestore();
