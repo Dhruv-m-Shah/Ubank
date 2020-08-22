@@ -1,0 +1,52 @@
+body {
+    overflow: hidden;
+}
+
+.my-row {
+    border: dotted;
+    border-color: red;
+}
+
+.my-col {
+    border: dotted;
+    border-color: blue;
+}
+
+#mainRow {
+    height: 100vh;
+}
+
+
+
+
+
+.sectionTitle {
+    height: 5vh;
+}
+
+#customerInfo {
+    height: 20vh;
+}
+
+#clickableIcons {
+    height: 25vh;
+}
+
+#accounts {
+    height: 50vh;
+}
+
+
+
+
+#customerProfilePic {
+    height: 20vh;
+}
+
+#quickTransfer {
+    height: 33vh;
+}
+
+#transferHistoryBrief {
+    height: 14vh;
+}
