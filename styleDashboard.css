@@ -10,17 +10,17 @@ body {
 }
 
 .my-row {
-    
+    /*
     border: dotted;
     border-color: red;
-    
+    */   
 }
 
 .my-col {
-    
+    /*
     border: dotted;
     border-color: blue;
-    
+    */
 }
 
 #mainRow {
