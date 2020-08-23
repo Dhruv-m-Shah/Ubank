@@ -1,0 +1,66 @@
+.accountRow {
+    height: 100%;
+}
+
+#chequingTitle {
+    margin-left: 100px;
+}
+
+#savingsTitle{
+    margin-left: 110px;
+}
+
+#investmentTitle {
+    margin-left: 95px;
+}
+
+#transactionRow {
+    position: relative;
+    height: 200px;
+}
+
+.transactionContainer {
+    position: absolute;
+    width: 98.5%;
+    height: 95%;
+    margin: 5px 5px 5px 5px;
+
+    background: solid;
+    background-color: #2D6A4F;
+    border-radius: 20px;
+}
+
+#accountImageChequing {
+    position: absolute;
+    height: 150px;
+    left: 2.5%;
+    top: 8%;
+}
+
+#accountTitle {
+    position: absolute;
+    left: 25%;
+    top: 8%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#accountNumber {
+    position: absolute;
+    left: 25%;
+    top: 75%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#transactionAmount {
+    position: absolute;
+    left: 75%;
+    top: 37%;
+
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
