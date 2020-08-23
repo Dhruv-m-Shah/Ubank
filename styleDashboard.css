@@ -8,11 +8,11 @@ body {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
-
+/*
 .my-row {
     
     border: dotted;
-    border-color: red;
+    /border-color: red;
     
 }
 
@@ -21,8 +21,7 @@ body {
     border: dotted;
     border-color: blue;
     
-}
-
+}*/
 #mainRow {
     height: 100vh;
 }
@@ -289,6 +288,26 @@ color: #95D5B2;
     font-weight: bold;
 }
 
+#accountBalance2 {
+    position: absolute;
+    left: 75%;
+    top: 37%;
+
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+#savingBalance{
+    position: absolute;
+    left: 75%;
+    top: 37%;
+
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
 
 /* -------------------------------------------------- */
 /*                       COLUMN 2                     */
@@ -383,7 +402,37 @@ color: #95D5B2;
     top: 8%;
 }
 
-#contactName {
+#transferImg1 {
+    position: absolute;
+    height: 90px;
+    left: 2.5%;
+    top: 8%;
+}
+
+#transferImg2 {
+    position: absolute;
+    height: 90px;
+    left: 2.5%;
+    top: 8%;
+}
+
+#contactName1 {
+    position: absolute;
+    left: 25%;
+    top: 40%;
+
+    color: white;
+    font-weight: bold;
+}
+#contactName2 {
+    position: absolute;
+    left: 25%;
+    top: 40%;
+
+    color: white;
+    font-weight: bold;
+}
+#contactName3 {
     position: absolute;
     left: 25%;
     top: 40%;
