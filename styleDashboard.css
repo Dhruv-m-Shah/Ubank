@@ -87,7 +87,7 @@ body {
 .sidenav {
     position: fixed;
     left: 0;
-    padding-top: 350px;
+    padding-top: 240px;
 }
   
 .sidenav a {
@@ -296,7 +296,13 @@ color: #95D5B2;
     color: white;
     font-weight: bold;
 }
+#logo {
+    position: absolute;
+    top: 75%;
+    left: 12%;
 
+    height: 250px;
+}
 #savingBalance{
     position: absolute;
     left: 75%;

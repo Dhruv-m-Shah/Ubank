@@ -1,0 +1,75 @@
+#portfolioTitle {
+    margin-left: 300px;
+}
+
+#assetRow {
+    position: relative;
+    height: 200px;
+}
+
+.assetContainer {
+    position: absolute;
+    width: 98.5%;
+    height: 95%;
+    margin: 5px 5px 5px 5px;
+
+    background: solid;
+    background-color: #2D6A4F;
+    border-radius: 20px;
+}
+
+
+#assetTicker {
+    position: absolute;
+    left: 25%;
+    top: 8%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#exchange {
+    position: absolute;
+    left: 25%;
+    top: 40%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#numberOfShares {
+    position: absolute;
+    left: 25%;
+    top: 75%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#value {
+    position: absolute;
+    left: 5%;
+    top: 37%;
+
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.chartContainer{
+    position: absolute;
+    top: 4%;
+    left: 50%;
+
+    height: 95%;
+    width: 45%;
+}
+
+.chartContainer2{
+    position: absolute;
+    top: 5%;
+    left: 0%;
+
+    height: 100%;
+    width: 97%;
+}

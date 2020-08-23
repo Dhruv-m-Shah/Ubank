@@ -13,3 +13,10 @@
 .balancePage3 {
     margin-top: 110px;
 }
+#logo {
+    position: absolute;
+    top: 75%;
+    left: 12%;
+
+    height: 250px;
+}

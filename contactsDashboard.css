@@ -8,7 +8,13 @@ body {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
+#logo {
+    position: absolute;
+    top: 75%;
+    left: 12%;
 
+    height: 250px;
+}
 .my-row {
     /*
     border: dotted;
@@ -125,7 +131,7 @@ body {
 .sidenav {
     position: fixed;
     left: 0;
-    padding-top: 350px;
+    padding-top: 240px;
 }
   
 .sidenav a {
