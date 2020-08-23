@@ -18,7 +18,25 @@ function speechToText() {
     var command = event.results[current][0].transcript;
     //'command' contains the string inputted by the user
     message.textContent = "Voice Input: " + command;
-    console.log(command);
+
+    setTimeout(function () {
+      var request = new XMLHttpRequest();
+      request.open("POST", "http://localhost:1337/sms");
+      request.setRequestHeader("phone", window.localStorage.getItem('phoneNumber'));
+      request.setRequestHeader("voice", "voice");
+      request.setRequestHeader("command", command);
+      request.send();
+
+      request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
+          console.log("Request was successful.");
+        } else {
+          console.log("Request was unsuccessful." + request.responseText);
+        }
+      };
+      console.log(command);
+    }, 6000);
+
   };
 
   recognition.onspeechend = function () {
@@ -33,18 +51,5 @@ function speechToText() {
     recognition.start();
   });
 
-  /*var request = new XMLHttpRequest();
-  request.open("POST", "localhost:5000");
-
-  request.setRequestHeader("command", command);
-  request.send();
-
-  request.onreadystatechange = function () {
-    if (request.readyState === XMLHttpRequest.DONE && request.status === 200) {
-      console.log("Request was sucessful.");
-    } else {
-      console.log("Request was unsuccessful." + request.responseText);
-    }
-  };*/
 }
 speechToText();
