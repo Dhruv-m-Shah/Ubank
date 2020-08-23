@@ -8,11 +8,11 @@ body {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
-
+/*
 .my-row {
     
     border: dotted;
-    border-color: red;
+    /border-color: red;
     
 }
 
@@ -21,8 +21,7 @@ body {
     border: dotted;
     border-color: blue;
     
-}
-
+}*/
 #mainRow {
     height: 100vh;
 }
