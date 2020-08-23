@@ -8,19 +8,55 @@ body {
     overflow: hidden;
     font-family: 'Montserrat', sans-serif;
 }
-/*
+
 .my-row {
-    
+    /*
     border: dotted;
-    /border-color: red;
-    
+    border-color: red;
+    */
 }
+
 .my-col {
-    
+    /*
     border: dotted;
     border-color: blue;
-    
-}*/
+    */
+}
+
+#header {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+
+    color: black;
+    font-weight: bold;
+}
+
+#commandsList {
+    left: -100%;
+    top: 10%;
+    color: white;
+    background-color: #2D6A4F;
+}
+
+#btnCommand {
+    position: absolute;
+    left: 10%;
+    top: 115%;
+    background: solid;
+    background-color: #2D6A4F;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#message {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    color: #2D6A4F;
+    font-size: 50px;
+}
+
 #mainRow {
     height: 100vh;
 }
@@ -287,26 +323,6 @@ color: #95D5B2;
     font-weight: bold;
 }
 
-#accountBalance2 {
-    position: absolute;
-    left: 75%;
-    top: 37%;
-
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
-}
-
-#savingBalance{
-    position: absolute;
-    left: 75%;
-    top: 37%;
-
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
-}
-
 
 /* -------------------------------------------------- */
 /*                       COLUMN 2                     */
@@ -401,37 +417,7 @@ color: #95D5B2;
     top: 8%;
 }
 
-#transferImg1 {
-    position: absolute;
-    height: 90px;
-    left: 2.5%;
-    top: 8%;
-}
-
-#transferImg2 {
-    position: absolute;
-    height: 90px;
-    left: 2.5%;
-    top: 8%;
-}
-
-#contactName1 {
-    position: absolute;
-    left: 25%;
-    top: 40%;
-
-    color: white;
-    font-weight: bold;
-}
-#contactName2 {
-    position: absolute;
-    left: 25%;
-    top: 40%;
-
-    color: white;
-    font-weight: bold;
-}
-#contactName3 {
+#contactName {
     position: absolute;
     left: 25%;
     top: 40%;
@@ -448,4 +434,8 @@ color: #95D5B2;
     font-size: 30px;
     color: white;
     font-weight: bold;
+}
+
+#vedantsRow {
+    height: 100px;
 }
