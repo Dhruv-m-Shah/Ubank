@@ -1,0 +1,22 @@
+#chartTitle {
+    margin-left: 175px;
+}
+
+.balancePage1 {
+    margin-top: 75px;
+}
+
+.balancePage2 {
+    margin-top: 110px;
+}
+
+.balancePage3 {
+    margin-top: 110px;
+}
+#logo {
+    position: absolute;
+    top: 75%;
+    left: 12%;
+
+    height: 250px;
+}

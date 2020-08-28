@@ -1,0 +1,132 @@
+.accountRow {
+    height: 100%;
+}
+
+#chequingTitle {
+    margin-left: 100px;
+}
+
+#savingsTitle{
+    margin-left: 110px;
+}
+
+#investmentTitle {
+    margin-left: 95px;
+}
+#logo {
+    position: absolute;
+    top: 75%;
+    left: 12%;
+
+    height: 250px;
+}
+#transactionRow {
+    position: relative;
+    height: 200px;
+}
+
+.depositContainer {
+    position: absolute;
+    width: 98.5%;
+    height: 95%;
+    margin: 5px 5px 5px 5px;
+
+    background: solid;
+    background-color: #74C69D;
+    border-radius: 20px;
+}
+
+.withdrawalContainer {
+    position: absolute;
+    width: 98.5%;
+    height: 95%;
+    margin: 5px 5px 5px 5px;
+
+    background: solid;
+    background-color: #40916C;
+    border-radius: 20px;
+}
+
+.transferContainer {
+    position: absolute;
+    width: 98.5%;
+    height: 95%;
+    margin: 5px 5px 5px 5px;
+
+    background: solid;
+    background-color: #1B4332;
+    border-radius: 20px;
+}
+
+.investmentContainer {
+    position: absolute;
+    width: 98.5%;
+    height: 95%;
+    margin: 5px 5px 5px 5px;
+
+    background: solid;
+    background-color: #081C15;
+    border-radius: 20px;
+}
+
+#transactionImage {
+    position: absolute;
+    height: 100px;
+    left: 2.5%;
+    top: 18%;
+}
+
+#accountTitle {
+    position: absolute;
+    left: 25%;
+    top: 10%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#accountNumber {
+    position: absolute;
+    left: 25%;
+    top: 25%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#transactionSource {
+    position: absolute;
+    left: 25%;
+    top: 40%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#transactionType {
+    position: absolute;
+    left: 25%;
+    top: 55%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#transactionDate {
+    position: absolute;
+    left: 25%;
+    top: 70%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#transactionAmount {
+    position: absolute;
+    left: 75%;
+    top: 40%;
+
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}

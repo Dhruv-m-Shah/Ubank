@@ -1,0 +1,217 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>HackThe6ix</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="styleDashboard.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <script src="main.js"></script>
+    </head>
+
+    <body>
+
+        <div class="row" id="mainRow">
+
+            <div class="col-md-2 my-col" id="sideNavCol">
+                <img src="img/profile.png" alt="" id="navLogo">
+                <img src="img/logo.png" alt="" id = "logo">
+                <p id="customerNameNav">Brayden Royston</p>
+
+                <div class="sidenav">
+                    <a href="dashboard.html" id="active">At a Glance</a>
+                    <a href="accountBalances.html">Account Balances</a> <!-- Brayden -->
+                    <a href="contacts.html">Contacts</a> <!-- Vedant -->
+                    <a href="pastTransactions.html">Past Transactions</a> <!-- Brayden -->
+                    <a href="assetPortfolio.html">Asset Portfolio</a> <!-- Brayden -->
+                    <a href="ubankVoice.html">UBank Voice</a> <!-- Vedant -->
+                </div>
+            </div>
+
+            <div class="col-md-5 my-col" id="col1">
+
+                <div class="row my-row" id="customerInfo">
+                    <h1 id="customerName">Brayden Royston</h1>
+                    <h2 id="customerData">905-359-6189 • broyston@uwaterloo.ca • Waterloo, Ontario</h2>
+                </div>
+
+                <!--<div class="separatorHorizontal"></div>-->
+                <!--<div class="separatorVertical"></div>-->
+
+                <div class="row my-row" id="sectionTitle">
+                    <h3 id="col1Title">Your Accounts</h3>
+                </div>
+
+                <div class="row my-row" id="clickableIcons">
+
+                    <div class="row justify-content-center" id="clickablesRow">
+                        <ul class="clickablesList list-inline" id="clickables">
+                          <li id="clickable"><a href="" target="_blank"><i class = "fa fa-money"></i></a></li>
+                          <li id="clickable"><a href="" target="_blank"><i class = "fa fa-arrow-circle-o-up"></i></a></li>
+                          <li id="clickable"><a href="" target="_blank"><i class = "fa fa-arrows-h"></i></a></li>
+                        </ul>
+                    </div>
+
+                    <ul id="titleList">
+                        <li>Deposit</li>
+                        <li>Withdraw</li>
+                        <li>Transfer</li>
+                    </ul>
+                </div>
+
+                <div class="row my-row" id="accounts">
+                    <div class="col-md-12 my-col">
+                        <div class="row my-row" id="accountRow">
+                            <div class="accountContainer">
+                                <img src="img/cheque.png" alt="" id="accountImageChequing">
+                                <p id="accountTitle">Chequing Account</p>
+                                <p id="accountNumber">123456789</p>
+                                <p id="accountBalance"></p>
+                            </div>
+                        </div>
+
+                        <div class="row my-row" id="accountRow">
+                            <div class="accountContainer">
+                                <img src="img/money.png" alt="" id="accountImageChequing">
+                                <p id="accountTitle">Savings Account</p>
+                                <p id="accountNumber">123456789</p>
+                                <p id="savingBalance"></p>
+                            </div>
+                        </div>
+
+                        <div class="row my-row" id="accountRow">
+                            <div class="accountContainer">
+                                <img src="img/cash.png" alt="" id="accountImageChequing">
+                                <p id="accountTitle">Chequing Account 2</p>
+                                <p id="accountNumber">123456789</p>
+                                <p id="accountBalance2"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="col-md-5 my-col" id="col2">
+
+                <!--<div class="row my-row" id="customerProfilePic">
+                    <img src="img/profile.png" alt="" id="customerProfile">
+                </div>-->
+
+                <!--<div class="separatorHorizontal"></div>-->
+
+                <div class="row my-row" id="sectionTitle">
+                    <h3 id="col2Title">Your Transfers</h3>
+                </div>
+
+                <div class="row my-row" id="quickTransfer">
+
+                    <div class="col-md-6 my-col" id="quickTransferInternal">
+                        <div class="internalTitle">
+                            <p id="transferTitle1">Transfer Between Your Accounts</p>
+                        </div>
+
+                        <form action="">
+                            <div class="form-group top-group">
+                                <label for="exampleFormControlInput1">Amount</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="$">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">From Account:</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Chequing</option>
+                                    <option>Savings</option>
+                                    <option>Investment Savings</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">To Account:</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Chequing</option>
+                                    <option>Savings</option>
+                                    <option>Investment Savings</option>
+                                </select>
+                            </div>
+                        </form>
+
+                        <div class="transferButton">
+                            <p id="transferTitle">Transfer</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 my-col" id="quickTransferExternal">
+                        <div class="internalTitle">
+                            <p id="transferTitle2">Transfer to a Contact</p>
+                        </div>
+
+                        <form action="">
+                            <div class="form-group top-group2ndColumn">
+                                <label for="exampleFormControlInput1">Amount</label>
+                                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="$">
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleFormControlSelect1">To Contact:</label>
+                                <select class="form-control" id="exampleFormControlSelect1">
+                                    <option>Dhruv Shah</option>
+                                    <option>Vedant Shah</option>
+                                    <option>Paige Royston</option>
+                                </select>
+                            </div>
+                        </form>
+
+                        <div class="transferButton">
+                            <p id="transferTitle">Transfer</p>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="row my-row" id="sectionTitle">
+                    <h3 id="col2Title2">Transfer History</h3>
+                </div>
+
+                <div class="row my-row" id="transfers">
+                    <div class="col-md-12 my-col">
+                        <div class="row my-row" id="transferRow">
+                            <div class="accountContainer">
+                                <img src="" alt="" id="transferImg">
+                                <p id="contactName1">Contact Name</p>
+                            </div>
+                        </div>
+
+                        <div class="row my-row" id="transferRow">
+                            <div class="accountContainer">
+                                <img src="" alt="" id="transferImg1">
+                                <p id="contactName2">Contact Name</p>
+                            </div>
+                        </div>
+
+                        <div class="row my-row" id="transferRow">
+                            <div class="accountContainer">
+                                <img src="" alt="" id="transferImg2">
+                                <p id="contactName3">Contact Name</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+       
+        
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <script src="main.js"></script>
+
+    </body>
+
+</html>

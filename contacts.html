@@ -1,0 +1,139 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>HackThe6ix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="contactsDashboard.css">
+    <link rel="stylesheet" href="styleDashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <style>
+        .img-container {
+          text-align: center;
+        }
+      </style>
+</head>
+
+<body>
+
+    <div class="row" id="mainRow">
+
+        <div class="col-md-2 my-col" id="sideNavCol">
+            <img src="img/profile.png" alt="" id="navLogo">
+            <img src="img/logo.png" alt="" id = "logo">
+            <p id="customerNameNav">Brayden Royston</p>
+
+            <div class="sidenav">
+                <a href="dashboard.html">At a Glance</a>
+                <a href="accountBalances.html">Account Balances</a> <!-- Brayden -->
+                <a href="contacts.html" id="active">Contacts</a> <!-- Vedant -->
+                <a href="pastTransactions.html">Past Transactions</a> <!-- Brayden -->
+                <a href="assetPortfolio.html">Asset Portfolio</a> <!-- Brayden -->
+                <a href="ubankVoice.html">UBank Voice</a> <!-- Vedant -->
+            </div>
+        </div>
+
+        <div class="col-md-5 my-col" id="col1">
+            <div class="row my-row" id="sectionTitle">
+                <h3 id="col1Title">Your Contacts</h3>
+            </div>
+            <div class="row my-row" id="contacts">
+                <div class="col-md-12 my-col">
+                    <div class="row my-row" id="transferRow">
+                        <div class="accountContainer">
+                            <img src="img/profile.png" alt="" id="transferImg">
+                            <p id="name">Vedant Shah</p>
+                            <p id="email">v37shah@uwaterloo.ca</p>
+                            <p id="phone">123456789</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-row" id="transferRow">
+                        <div class="accountContainer">
+                            <img src="img/profile.png" alt="" id="transferImg">
+                            <p id="name">Dhruv Shah</p>
+                            <p id="email">dhruv.shah@uwaterloo.ca</p>
+                            <p id="phone">123456789</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-row" id="transferRow">
+                        <div class="accountContainer">
+                            <img src="img/profile.png" alt="" id="transferImg">
+                            <p id="name">Elon Musk</p>
+                            <p id="email">elon.musk@tesla.com</p>
+                            <p id="phone">123456789</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-row" id="transferRow">
+                        <div class="accountContainer">
+                            <img src="img/profile.png" alt="" id="transferImg">
+                            <p id="name">Bill Gates</p>
+                            <p id="email">bill.gates@microsoft.com</p>
+                            <p id="phone">123456789</p>
+                        </div>
+                    </div>
+                    <div class="row my-row" id="transferRow">
+                        <div class="accountContainer">
+                            <img src="img/profile.png" alt="" id="transferImg">
+                            <p id="name">Sundar Pichai</p>
+                            <p id="email">sundar.pichai@google.com</p>
+                            <p id="phone">123456789</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 my-col" id="col2">
+            <div class="form-container">
+                <h3 id="col1Title">Add Contact</h3>
+                <div class="img-container">
+                    <img src="img/addcontacts.png" alt="" id="addContact">
+                  </div>
+                <form id="add-contact">
+                    <div class="form-group">
+                        <label for="exampleInputName1">Name</label>
+                        <input type="name" class="form-control" id="exampleInputName1" placeholder="John Doe">
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+                            placeholder="johndoe@gmail.com">
+                        <small id="emailHelp" class="form-text text-muted"></small>
+                        <label for="exampleInputNumber1">Phone Number</label>
+                        <input type="email" class="form-control" id="exampleInputNumber1" aria-describedby="emailHelp"
+                            placeholder="+1 123 456 7890">
+                        <label for="myfile">Select an image:</label>
+                        <input type="file" id="myfile" name="myfile">
+                    </div>
+
+                    <a href="contacts.html" class="btn btn-primary">Add Contact</a>
+                </form>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

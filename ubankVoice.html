@@ -1,0 +1,95 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>HackThe6ix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="ubankVoiceDashboard.css">
+    <link rel="stylesheet" href="styleDashboard.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+</head>
+
+<body>
+
+    <div class="row" id="mainRow">
+
+        <div class="col-md-2 my-col" id="sideNavCol">
+            <img src="img/profile.png" alt="" id="navLogo">
+            <img src="img/logo.png" alt="" id = "logo">
+            <p id="customerNameNav">Brayden Royston</p>
+
+            <div class="sidenav">
+                <a href="dashboard.html">At a Glance</a>
+                <a href="accountBalances.html">Account Balances</a> <!-- Brayden -->
+                <a href="contacts.html">Contacts</a> <!-- Vedant -->
+                <a href="pastTransactions.html">Past Transactions</a> <!-- Brayden -->
+                <a href="assetPortfolio.html">Asset Portfolio</a> <!-- Brayden -->
+                <a href="ubankVoice.html" id="active">UBank Voice</a> <!-- Vedant -->
+            </div>
+        </div>
+
+        <div class="col-md-10 my-col" id="col1">
+            <div class="row my-row" id="header">
+                <h3 style="color:2D6A4F">With UBank, you can bank by saying any of the following simple commands. 
+                    In an instant, your transaction will be completed, making this the most sophisticated
+                    banking software in the market, helping all types of people.
+                </h3>
+                <h3 style="color:2D6A4F">Starting banking with UBank Voice today!</h3>
+                <div class="list-group">
+                    <a class="list-group-item" id="commandsList">
+                        <h4>transfer ($$$) from checking to saving</h4>
+                        <p>Transfer money from your checking to savings account.</p>
+                    </a>
+                    <a class="list-group-item" id="commandsList">
+                        <h4>transfer ($$$) from saving to checking</h4>
+                        <p>Transfer money from your savings to checking account.</p>
+                    </a>
+                    <a class="list-group-item" id="commandsList">
+                        <h4>transfer ($$$) to (recipient)</h4>
+                        <p>Transfer money from checking into a recipient's checking account</p>
+                    </a>
+                    <a class="list-group-item" id="commandsList">
+                        <h4>check balance</h4>
+                        <p>View your account's balance</p>
+                    </a>
+                    <a class="list-group-item" id="commandsList">
+                        <h4>stock (Nasdaq Composite)</h4>
+                        <p>View a certain company's stock price</p>
+                    </a>
+                   
+                </div>
+
+                <button type="button" class="btn btn-primary btn-lg" id='btnCommand'>
+                    Click to enter command:
+                </button>
+            </div>
+            <br><br>    
+            <span id='message'></span>
+            <script src="speechrecognitionbanking.js"></script>
+            
+        </div>
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+</html>

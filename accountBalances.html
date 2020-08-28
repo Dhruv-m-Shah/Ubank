@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+<head>
+    <meta charset="utf-8" />
+    <title>HackThe6ix</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="styleDashboard.css">
+    <link rel="stylesheet" href="styleAccountBalances.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+</head>
+
+<body>
+
+    <div class="row" id="mainRow">
+
+        <div class="col-md-2 my-col" id="sideNavCol">
+            <img src="img/profile.png" alt="" id="navLogo">
+            <img src="img/logo.png" alt="" id = "logo">
+            <p id="customerNameNav">Brayden Royston</p>
+
+            <div class="sidenav">
+                <a href="dashboard.html">At a Glance</a>
+                <a href="accountBalances.html" id="active">Account Balances</a> <!-- Brayden -->
+                <a href="contacts.html">Contacts</a> <!-- Vedant -->
+                <a href="pastTransactions.html">Past Transactions</a> <!-- Brayden -->
+                <a href="assetPortfolio.html">Asset Portfolio</a> <!-- Brayden -->
+                <a href="ubankVoice.html">UBank Voice</a> <!-- Vedant -->
+            </div>
+        </div>
+
+        <div class="col-md-5 my-col" id="col1">
+            <div class="row my-row" id="sectionTitle">
+                <h3 id="col1Title">Your Accounts</h3>
+            </div>
+            <div class="row my-row" id="accounts">
+                <div class="col-md-12 my-col">
+                    <div class="row my-row balancePage1" id="accountRow">
+                        <div class="accountContainer">
+                            <img src="img/cheque.png" alt="" id="accountImageChequing">
+                            <p id="accountTitle">Chequing Account</p>
+                            <p id="accountNumber">123456789</p>
+                            <p id="accountBalance">$ 8,432.20</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-row balancePage2" id="accountRow">
+                        <div class="accountContainer">
+                            <img src="img/money.png" alt="" id="accountImageChequing">
+                            <p id="accountTitle">Savings Account</p>
+                            <p id="accountNumber">123456789</p>
+                            <p id="savingBalance">$ 20,532.40</p>
+                        </div>
+                    </div>
+
+                    <div class="row my-row balancePage3" id="accountRow">
+                        <div class="accountContainer">
+                            <img src="img/cash.png" alt="" id="accountImageChequing">
+                            <p id="accountTitle">Chequing Account 2</p>
+                            <p id="accountNumber">123456789</p>
+                            <p id="accountBalance2">$ 7,237.68</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-5 my-col" id="col2">
+            <div class="row my-row" id="sectionTitle">
+                <h3 id="chartTitle">Your Account Balances Over Time</h3>
+            </div>
+            <canvas id="chequing" width="400" height="160"></canvas>
+            <canvas id="savings" width="400" height="160"></canvas>
+            <canvas id="investment" width="400" height="120"></canvas>
+        </div>
+
+    </div>
+
+
+    <script>
+        getInfo1();
+        function parseTransactions(tData){
+        
+            let balanceData = []
+            for(let i = tData.length-5; i < tData.length; i++){
+                let tempArr = tData[i].split(' ');
+                if(tempArr[tempArr.length - 3] == "balance"){
+                    balanceData.push(tempArr[tempArr.length - 1]);
+                }
+            }
+            return balanceData;
+        }
+        function getInfo1() {
+            var request = new XMLHttpRequest();
+            request.open('POST', 'http://localhost:1337/getInfo')
+            request.setRequestHeader("number", window.localStorage.getItem(
+                'phoneNumber')) // Change this to local storage.
+            request.send();
+            request.onreadystatechange = function () {
+                if (request.readyState == 4 && request.status == 200) {
+                    console.log("TEST");
+                    fillGraphs(JSON.parse(request.responseText));
+                } else {
+                    console.log(request.responseText)
+                }
+            }
+        }
+
+        function fillGraphs(data) {
+            
+            document.getElementById('accountBalance').innerHTML = data.chequing;
+            document.getElementById('savingBalance').innerHTML = data.saving;
+            document.getElementById('accountBalance2').innerHTML = '$ ' +  data.balance;
+            var chequing = document.getElementById('chequing');
+            var myChart = new Chart(chequing, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 2019', '', '', '', '', 'Jan 2020'],
+                    datasets: [{
+                        label: "Balance",
+                        data: data.chequingHistory,
+                        backgroundColor: [
+                            'rgba(82, 183, 136, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 0, 0, 0.2)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)'
+                        ],
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    title: {
+                        display: true,
+                        text: "Chequing Account"
+                    }
+                }
+            });
+
+            var savings = document.getElementById('savings');
+            var myChart = new Chart(savings, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 2019', '', '', '', '', 'Jan 2020'],
+                    datasets: [{
+                        label: "Balance",
+                        data: data.savingHistory,
+                        backgroundColor: [
+                            'rgba(45, 106, 79, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 0, 0, 0.2)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)'
+                        ],
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    title: {
+                        display: true,
+                        text: "Savings Account"
+                    }
+                }
+            });
+
+            var investment = document.getElementById('investment');
+            var myChart = new Chart(investment, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 2019', '', '', '', '', 'Jan 2020'],
+                    datasets: [{
+                        label: "Balance",
+                        data: parseTransactions(data.transactionHistory),
+                        backgroundColor: [
+                            'rgba(8, 28, 21, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 0, 0, 0.2)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)'
+                        ],
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    title: {
+                        display: true,
+                        text: "Investment Savings Account"
+                    }
+                }
+            });
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+    <script src="main.js"></script>
+
+</body>
+
+<<<<<<< HEAD
+</html>
+=======
+</html>
+>>>>>>> 1fab4af24bc337d063ec6540cd910cb686f01569

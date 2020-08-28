@@ -1,0 +1,127 @@
+html {
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+.bigWrapper {
+    z-index: -1;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background: solid;
+    background-color: black;
+}
+
+.form-container {
+    background: solid;
+    background-color: #D8F3DC;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px 10px #1B4332;
+    position: absolute;
+    left: 35%;
+    width: 30%;
+    top: 25%;
+    height: 55vh;
+}
+
+#logIn {
+    position: absolute;
+    left: 25%;
+    top: 0%;
+
+    height: 300px;
+    width: auto;
+}
+
+#log-in {
+    position: absolute;
+    width: 90%;
+    top: 50%;
+    left: 5%;
+}
+
+@keyframes animateFirst{
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(45deg);
+    }
+    50% {
+        transform: translateY(-250px) translateX(250px) rotate(45deg);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(45deg);
+    }
+}
+
+@keyframes animateSecond{
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(45deg);
+    }
+    50% {
+        transform: translateY(-500px) translateX(500px) rotate(45deg);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(45deg);
+    }
+}
+
+@keyframes animateThird{
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(45deg);
+    }
+    50% {
+        transform: translateY(-500px) translateX(500px) rotate(45deg);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(45deg);
+    }
+}
+
+@keyframes animateFourth{
+    0% {
+        transform: translateY(0px) translateX(0px) rotate(45deg);
+    }
+    50% {
+        transform: translateY(-250px) translateX(250px) rotate(45deg);
+    }
+    100% {
+        transform: translateY(0px) translateX(0px) rotate(45deg);
+    }
+}
+
+#movers {
+    position: absolute;
+    width: 20px;
+    background: solid;
+    background-color: #95D5B2;
+    border-radius: 15px;
+}
+
+.mover1 {
+    height: 400px;
+    top: 0%;
+    animation: animateFirst 5s linear infinite;
+}
+
+.mover2 {
+    top: 30%;
+    animation: animateSecond 5s linear infinite;
+    height: 600px;
+}
+
+.mover3 {
+    top: 45%;
+    left: 80%;
+    animation: animateThird 5s linear infinite;
+    height: 600px;
+}
+
+.mover4 {
+    top: 75%;
+    left: 90%;
+    animation: animateFourth 5s linear infinite;
+    height: 400px;
+}

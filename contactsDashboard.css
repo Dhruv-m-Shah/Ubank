@@ -1,0 +1,446 @@
+/* -------------------------------------------------- */
+/*               MASTER AND GRID STYLES               */
+/* -------------------------------------------------- */
+html {
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Montserrat', sans-serif;
+}
+#logo {
+    position: absolute;
+    top: 75%;
+    left: 12%;
+
+    height: 250px;
+}
+.my-row {
+    /*
+    border: dotted;
+    border-color: red;
+    */   
+}
+
+.my-col {
+    /*
+    border: dotted;
+    border-color: blue;
+    */
+}
+
+#mainRow {
+    height: 100vh;
+}
+
+/* coloumn 1 */
+
+.sectionTitle {
+    height: 5vh;
+}
+
+#customerInfo {
+    height: 18vh;
+}
+
+#clickableIcons {
+    height: 15vh;
+}
+
+#accounts {
+    height: 60vh;
+}
+
+#addContactImg {
+    position: absolute;
+    height: 90px;
+    left: 2.5%;
+    top: 8%;
+}
+
+#email{
+    position: absolute;
+    left: 25%;
+    top: 50%;
+
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+#phone{
+    position: absolute;
+    left: 25%;
+    top: 30%;
+
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+#name {
+    position: absolute;
+    left: 25%;
+    top: 10%;
+
+    color: white;
+    font-weight: bold;
+}
+
+/* column 2 */
+
+#customerProfilePic {
+    height: 18vh;
+}
+
+#quickTransfer {
+    height: 39vh;
+}
+
+#transferHistoryBrief {
+    height: 12vh;
+}
+
+
+/* -------------------------------------------------- */
+/*                       NAV                          */
+/* -------------------------------------------------- */
+
+
+#sideNavCol {
+    background: solid;
+    background-color: #8d99ae;
+}
+
+#navLogo {
+    position: absolute;
+    left: 32%;
+    top: 5%;
+
+    height: 120px;
+}
+
+#customerNameNav {
+    position: absolute;
+    color: white;
+    font-weight: bold;
+    left: 32%;
+    top: 22%;
+}
+
+.sidenav {
+    position: fixed;
+    left: 0;
+    padding-top: 240px;
+}
+  
+.sidenav a {
+padding: 20px 8px 20px 32px;
+text-decoration: none;
+font-size: 25px;
+color: white;
+display: block;
+}
+
+#active {
+    color: #95D5B2;
+    background: solid;
+    background-color: #2D6A4F;
+}
+
+.sidenav a:hover {
+color: #95D5B2;
+}
+
+
+/* -------------------------------------------------- */
+/*                       COLUMN 1                     */
+/* -------------------------------------------------- */
+
+#col1 {
+    background: solid;
+    background-color: white;
+}
+
+/* customer information */
+
+#customerName {
+    position: absolute;
+    color: black;
+    top: 5%;
+    left: 31%;
+}
+
+#customerData {
+    position: absolute;
+    left: 7%;
+    top: 10%;
+    font-size: 25px;
+}
+
+#col1Title {
+    margin-left: 300px;
+}
+
+.separatorHorizontal {
+    position: absolute;
+    width: 100%;
+    height: 0.5%;
+    left: 0%;
+    top: 17.5%;
+    
+    background: solid;
+    background-color: #95D5B2;
+}
+
+.separatorVertical {
+    position: absolute;
+    width: 0.75%;
+    height: 100%;
+    left: 99.5%;
+    top: 0%;
+    
+    background: solid;
+    background-color: #95D5B2;
+}
+
+/* clickables */
+
+#titleList {
+    position: absolute;
+    top: 35%;
+
+    width: 100%;
+    list-style-type: none;
+    margin-left: 57px;
+    padding: 0;
+
+}
+
+#titleList li {
+    display: inline-block;
+    margin-left: 77px;
+    margin-right: 77px;
+}
+
+#titleList li:nth-child(3){
+    margin-left: 71px;
+}
+
+.clickablesList {
+    width: 800px;
+}
+
+.clickablesList a {
+    color: black;
+    border: 4px solid black;
+    width: 50px;
+    height: 50px;
+    line-height: 40px;
+    font-size: 20px;
+    display: inherit;
+    text-align: center;
+    border-radius: 50px;
+    transition: all ease 1s;
+    margin-top: 40px;
+}
+
+.clickablesList a:hover i {
+    color: green;
+}
+
+.clickablesList a:hover {
+    color: green;
+    border-color: green;
+}
+
+#clickablesRow {
+    position: absolute;
+    top: 30%;
+    left: 50.7%;
+    transform: translate(-50%, -50%);
+
+    padding: 0px;
+    margin: 0px;
+}
+
+#clickables:nth-child(1) {
+    margin-left: 100px;
+}
+
+#clickables:nth-child(2) {
+    margin-left: 400px;
+}
+
+#clickable {
+    display: inline-block;
+    margin-right: 85px;
+    margin-left: 85px;
+}
+
+/* accounts information */
+
+#accountRow {
+    position: relative;
+    height: 200px;
+}
+
+.accountContainer {
+    position: absolute;
+    width: 98.5%;
+    height: 95%;
+    margin: 5px 5px 5px 5px;
+
+    background: solid;
+    background-color: #2D6A4F;
+    border-radius: 20px;
+}
+
+#accountImageChequing {
+    position: absolute;
+    height: 150px;
+    left: 2.5%;
+    top: 8%;
+}
+
+#accountTitle {
+    position: absolute;
+    left: 25%;
+    top: 8%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#accountNumber {
+    position: absolute;
+    left: 25%;
+    top: 75%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#accountBalance {
+    position: absolute;
+    left: 75%;
+    top: 37%;
+
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* -------------------------------------------------- */
+/*                       COLUMN 2                     */
+/* -------------------------------------------------- */
+
+
+/* profile pic */
+
+#customerProfile {
+    position: absolute;
+    height: 160px;
+    top: 0.75%;
+    left: 39%;
+}
+
+/* title */
+
+#col2Title {
+    margin-top: 60px;
+    margin-left: 300px;
+}
+
+/* transfer interface */
+
+.internalTitle {
+    position: absolute;
+    left: 10%;
+    top: 3%;
+
+    height: 30px;
+    width: 80%;
+    background: solid;
+    background-color: #2D6A4F;
+    border-radius: 10px;
+}
+
+#transferTitle1 {
+    color: white;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-left: 28px;
+}
+
+#transferTitle2 {
+    color: white;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-left: 80px;
+}
+
+.top-group {
+    margin-top: 50px;
+}
+
+.top-group2ndColumn {
+    margin-top: 95px;
+}
+
+.transferButton {
+    position: absolute;
+    left: 30%;
+    top: 85%;
+
+    height: 30px;
+    width: 40%;
+    background: solid;
+    background-color: #2D6A4F;
+    border-radius: 10px;
+}
+
+#transferTitle {
+    color: white;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-left: 47px;
+}
+
+/* transfer history */
+
+#col2Title2 {
+    margin-left: 300px;
+}
+#transferRow {
+    position: relative;
+    height: 121px;
+}
+
+#transferImg {
+    position: absolute;
+    height: 90px;
+    left: 2.5%;
+    top: 8%;
+}
+
+#contactName {
+    position: absolute;
+    left: 25%;
+    top: 40%;
+
+    color: white;
+    font-weight: bold;
+}
+
+#transferAmount {
+    position: absolute;
+    left: 75%;
+    top: 30%;
+
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+

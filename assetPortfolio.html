@@ -1,0 +1,356 @@
+<!DOCTYPE HTML>
+
+<html>
+
+
+    <head>
+        <meta charset="utf-8"/>
+        <title>HackThe6ix</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <link rel="stylesheet" href="styleDashboard.css">
+        <link rel="stylesheet" href="styleAssetPortfolio.css">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.bundle.js"></script>
+    </head>
+
+    <body>
+
+        <div class="row" id="mainRow">
+
+            <div class="col-md-2 my-col" id="sideNavCol">
+                <img src="img/profile.png" alt="" id="navLogo">
+
+                <p id="customerNameNav">Brayden Royston</p>
+
+                <div class="sidenav">
+                    <a href="dashboard.html">At a Glance</a>
+                    <a href="accountBalances.html">Account Balances</a> <!-- Brayden -->
+                    <a href="contacts.html">Contacts</a> <!-- Vedant -->
+                    <a href="pastTransactions.html">Past Transactions</a> <!-- Brayden -->
+                    <a href="assetPortfolio.html" id="active">Asset Portfolio</a> <!-- Brayden -->
+                    <a href="ubankVoice.html">UBank Voice</a> <!-- Vedant -->
+                </div>
+
+                <img src="img/logo.png" alt="" id = "logo">
+            </div>
+
+            <div class="col-md-5 my-col" id="col1">
+                <div class="row my-row" id="sectionTitle">
+                    <h3 id="portfolioTitle">Your Assets</h3>
+                </div>
+
+                <div class="row my-row" id="assetRow">
+                    <div class="assetContainer">
+                        <p id="value">$ 8,432.20</p>
+                        <p id="assetTicker">Ticker: NCLH</p>
+                        <p id="exchange">Exchange: NYSE</p>
+                        <p id="numberOfShares">Number of Shares: 79</p>
+                        <div class="chartContainer">
+                            <canvas id="nclh" width="400" height="200"></canvas>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row my-row" id="assetRow">
+                    <div class="assetContainer">
+                        <p id="value">$ 6,432.20</p>
+                        <p id="assetTicker">Ticker: GOOG</p>
+                        <p id="exchange">Exchange: NASDAQ</p>
+                        <p id="numberOfShares">Number of Shares: 79</p>
+                        <div class="chartContainer">
+                            <canvas id="goog" width="400" height="200"></canvas>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row my-row" id="assetRow">
+                    <div class="assetContainer">
+                        <p id="value">$ 1,472.20</p>
+                        <p id="assetTicker">Ticker: AC</p>
+                        <p id="exchange">Exchange: TSX</p>
+                        <p id="numberOfShares">Number of Shares: 79</p>
+                        <div class="chartContainer">
+                            <canvas id="ac" width="400" height="200"></canvas>
+                        </div>
+                        
+                    </div>
+                </div>
+
+                <div class="row my-row" id="assetRow">
+                    <div class="assetContainer">
+                        <p id="value">$ 3,432.20</p>
+                        <p id="assetTicker">Ticker: TSLA</p>
+                        <p id="exchange">Exchange: TSX</p>
+                        <p id="numberOfShares">Number of Shares: 79</p>
+                        <div class="chartContainer">
+                            <canvas id="tsla" width="400" height="200"></canvas>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-5 my-col" id="col2">
+                <div class="row my-row" id="sectionTitle">
+                    <h3 id="portfolioTitle">Your Portfolio</h3>
+                </div>
+                <div class="chartContainer2">
+                    <canvas id="portfolio" width="350" height="400"></canvas>
+                </div>
+            </div>
+
+        </div>
+
+       
+        <script>
+            var nclh = document.getElementById('nclh');
+            var myChart = new Chart(nclh, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 2019', '', '', '', '', 'Jan 2020'],
+                    datasets: [{
+                        label: '% Daily Change',
+                        data: [0.25, -0.15, 0.3, 0.2, -0.1, 0.4],
+                        backgroundColor: [
+                            'rgba(216, 243, 220, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 0, 0, 0.0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)'
+                        ],
+                        borderWidth: 3
+                    }]
+                },
+                
+                options: {
+                    scales: {
+                        label: [{
+                            color: 'rgba(255, 255, 255, 1)'
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                display: false
+                            }
+                        }]
+                    },
+                    legend: {
+                        labels: {
+                            // This more specific font property overrides the global property
+                            fontColor: 'black'
+                        }
+                    }
+                
+                }
+            });
+
+            var goog = document.getElementById('goog');
+            var myChart = new Chart(goog, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 2019', '', '', '', '', 'Jan 2020'],
+                    datasets: [{
+                        label: '% Daily Change',
+                        data: [0.1, 0.1, 0.2, -0.05, 0.1, 0.2],
+                        backgroundColor: [
+                            'rgba(216, 243, 220, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 0, 0, 0.0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)'
+                        ],
+                        borderWidth: 3
+                    }]
+                },
+                
+                options: {
+                    scales: {
+                        label: [{
+                            color: 'rgba(255, 255, 255, 1)'
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                display: false
+                            }
+                        }]
+                    },
+                    legend: {
+                        labels: {
+                            // This more specific font property overrides the global property
+                            fontColor: 'black'
+                        }
+                    }
+                
+                }
+            });
+
+            var ac = document.getElementById('ac');
+            var myChart = new Chart(ac, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 2019', '', '', '', '', 'Jan 2020'],
+                    datasets: [{
+                        label: '% Daily Change',
+                        data: [0.2, 0.2, 0.2, 0.1, 0.0, 0.1],
+                        backgroundColor: [
+                            'rgba(216, 243, 220, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 0, 0, 0.0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)'
+                        ],
+                        borderWidth: 3
+                    }]
+                },
+                
+                options: {
+                    scales: {
+                        label: [{
+                            color: 'rgba(255, 255, 255, 1)'
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                display: false
+                            }
+                        }]
+                    },
+                    legend: {
+                        labels: {
+                            // This more specific font property overrides the global property
+                            fontColor: 'black'
+                        }
+                    }
+                
+                }
+            });
+
+            var tsla = document.getElementById('tsla');
+            var myChart = new Chart(tsla, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 2019', '', '', '', '', 'Jan 2020'],
+                    datasets: [{
+                        label: '% Daily Change',
+                        data: [-0.1, -0.15, -0.3, 0.2, 0.1, -0.4],
+                        backgroundColor: [
+                            'rgba(216, 243, 220, 0.6)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 0, 0, 0.0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)',
+                            'rgba(0, 0, 0, 0)'
+                        ],
+                        borderWidth: 3
+                    }]
+                },
+                
+                options: {
+                    scales: {
+                        label: [{
+                            color: 'rgba(255, 255, 255, 1)'
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                display: false,
+                                beginAtZero: false,
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                display: false
+                            }
+                        }]
+                    },
+                    legend: {
+                        labels: {
+                            // This more specific font property overrides the global property
+                            fontColor: 'black'
+                        }
+                    }
+                
+                }
+            });
+
+            var portfolio = document.getElementById('portfolio');
+            var myChart = new Chart(portfolio, {
+                type: 'line',
+                data: {
+                    labels: ['Jan 2019', '', '', '', '', 'Jan 2020'],
+                    datasets: [{
+                        label: "Balance",
+                        data: [5400, 5200, 6400, 5700, 5800, 8432],
+                        backgroundColor: [
+                            'rgba(27, 67, 50, 1)'
+                        ],
+                        borderColor: [
+                            'rgba(0, 0, 0, 0.2)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)',
+                            'rgba(0, 0, 0, 1)'
+                        ],
+                        borderWidth: 3
+                    }]
+                },
+                options: {
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true
+                            }
+                        }]
+                    },
+                    title: {
+                        display: true,
+                        text: "Chequing Account"
+                    }
+                }
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <script src="main.js"></script>
+
+    </body>
+
+</html>
